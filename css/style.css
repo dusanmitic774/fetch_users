@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global */
+li {
+  list-style: none;
+}
+
+/* parallax */
+
+.hero {
+  background: url('../images/hero.jpg') no-repeat fixed center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.hero-title {
+  text-align: center;
+  margin: 20rem 0 20rem 0;
+  padding: 3rem;
+  color: white;
+}
+
+.hero-title h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+/* single user */
+.section {
+  padding: 5rem;
+  background: #1a1a1a;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.user {
+  text-align: center;
+  margin-bottom: 4rem;
+  overflow-wrap: break-word;
+}
+
+.user-info {
+  background-color: #404040;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 1.5rem 0;
+}
+
+.user-number {
+  margin-bottom: 1rem;
+}
+
+.user-details {
+  margin-bottom: 8px;
+}
+
+#pagination {
+  display: inline-block;
+}
+
+#pagination a {
+  color: white;
+  float: left;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+#pagination a.active {
+  background-color: #404040;
+  color: white;
+  border-radius: 5px;
+}
+
+#pagination a:hover {
+  background-color: #404040;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 576px) {
+  .users {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  .user {
+    flex: 0 0 calc(50% - 1rem);
+    text-align: left;
+    margin-right: 15px;
+  }
+
+  .user-info {
+    padding: 1.5rem 0 1.5rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .user {
+    flex: 0 0 calc(33.333% - 1rem);
+    text-align: left;
+  }
+}
