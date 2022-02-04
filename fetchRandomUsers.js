@@ -10,9 +10,8 @@ function fetchUsers(pageNumber) {
       data.results.forEach((user) => {
         const singleUser = document.createElement('div')
         singleUser.classList.add('user')
-        singleUser.setAttribute('data-aos', 'fade-in')
-
         users.appendChild(singleUser)
+        singleUser.setAttribute('data-aos', 'fade-in')
 
         const userNumber = document.createElement('div')
         userNumber.classList.add('user-number')
