@@ -2,6 +2,7 @@ function fetchUsers(pageNumber) {
   fetch(`https://randomuser.me/api?page=${pageNumber}&results=9&seed=abc`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data.results)
       const users = document.getElementById('users')
       users.innerHTML = ''
       let count = pageNumber * 9 - 8
@@ -9,6 +10,7 @@ function fetchUsers(pageNumber) {
       data.results.forEach((user) => {
         const singleUser = document.createElement('div')
         singleUser.classList.add('user')
+        singleUser.setAttribute('data-aos', 'fade-in')
 
         users.appendChild(singleUser)
 
